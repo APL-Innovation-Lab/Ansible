@@ -1,0 +1,9 @@
+{
+    "name": "Drupal Development",
+    "build": { "dockerfile": "Dockerfile" },
+    "settings": {},
+    "extensions": [],
+    "forwardPorts": [80],
+    "postCreateCommand": "ansible-galaxy install -r /workspaces/<repo-name>/requirements.yml && ansible-playbook /workspaces/<repo-name>/setup-drupal.yml"
+  }
+  
